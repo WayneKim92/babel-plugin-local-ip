@@ -1,8 +1,8 @@
 {
   "name": "babel-plugin-local-ip",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Do you want to automatically replace local IP?",
-  "main": "plugin/local-ip.js",
+  "main": "./plugin/local-ip.js",
   "repository": "https://github.com/WayneKim92/babel-plugin-local-ip",
   "author": "WayneKim92",
   "license": "MIT",
