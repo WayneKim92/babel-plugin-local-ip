@@ -1,16 +1,22 @@
 # Install
 ```shell
 yarn add babel-plugin-local-ip -D
+# or
 npm install babel-plugin-local-ip -D
 ```
 # Config
 ```shell
 // In babel.config.js
-["babel-plugin-local-ip", {
-"replaceString": "LOCAL_IP", // your string value
-// "interfaceName": "en0"
-"interfaceName": "en0" // enter your network type.
-}]
+plugins: ["babel-plugin-local-ip"] # "LOCAL_IP" string will be replaced with the local IP of the machine where the metro is running.
+# or
+plugins: [
+  [
+    "babel-plugin-local-ip", {
+        "replaceString": "FOO_LOCAL_IP", # (Option) If you want to change it to a different string value.
+        "interfaceName": "en0" # (Option) If you can't use the network as en0, Replace "en0" with your network type name.
+    }
+  ]
+]
 ```
 - If you cannot use en0, please refer to the original [code](https://github.com/WayneKim92/babel-plugin-local-ip/blob/main/plugin/local-ip.js).
 
